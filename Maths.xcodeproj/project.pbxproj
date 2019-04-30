@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		ED9FEFC72278A5D5008E3F46 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ED9FEFC62278A5D5008E3F46 /* main.m */; };
+		ED9FEFCF2278A5EE008E3F46 /* MathsGame.m in Sources */ = {isa = PBXBuildFile; fileRef = ED9FEFCE2278A5EE008E3F46 /* MathsGame.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		ED9FEFC32278A5D5008E3F46 /* Maths */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Maths; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED9FEFC62278A5D5008E3F46 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		ED9FEFCD2278A5EE008E3F46 /* MathsGame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MathsGame.h; sourceTree = "<group>"; };
+		ED9FEFCE2278A5EE008E3F46 /* MathsGame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MathsGame.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				ED9FEFC62278A5D5008E3F46 /* main.m */,
+				ED9FEFCD2278A5EE008E3F46 /* MathsGame.h */,
+				ED9FEFCE2278A5EE008E3F46 /* MathsGame.m */,
 			);
 			path = Maths;
 			sourceTree = "<group>";
@@ -119,6 +124,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED9FEFC72278A5D5008E3F46 /* main.m in Sources */,
+				ED9FEFCF2278A5EE008E3F46 /* MathsGame.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
