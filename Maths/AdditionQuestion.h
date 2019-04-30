@@ -1,5 +1,5 @@
 //
-//  MathsGame.h
+//  AdditionQuestion.h
 //  Maths
 //
 //  Created by Dayson Dong on 2019-04-30.
@@ -10,9 +10,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MathsGame : NSObject
+@interface AdditionQuestion : NSObject
 
 @property int score;
+@property NSInteger answer;
+@property NSString* question;
 
 
 -(NSString*) newQuestionWithLHS: (int) lhs andRHS: (int) rhs;
