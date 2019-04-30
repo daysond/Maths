@@ -1,5 +1,5 @@
 //
-//  AdditionQuestion.h
+//  InputHandler.h
 //  Maths
 //
 //  Created by Dayson Dong on 2019-04-30.
@@ -10,11 +10,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface AdditionQuestion : NSObject
+@interface InputHandler : NSObject
 
-@property int score;
-@property NSInteger answer;
-@property NSString* question;
++(NSString*)stringOutput;
 
 @end
 

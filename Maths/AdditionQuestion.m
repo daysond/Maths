@@ -10,12 +10,6 @@
 
 @implementation AdditionQuestion
 
--(NSString*) newQuestionWithLHS: (int) lhs andRHS: (int) rhs {
-    
-    NSString* question = [NSString stringWithFormat:@"%d + %d = ?",lhs, rhs];
-    
-    return question;
-}
 
 - (instancetype)init
 {
@@ -24,7 +18,7 @@
         _score = 0;
         int lhs = arc4random_uniform(10);
         int rhs = arc4random_uniform(10);
-        _question = [NSString stringWithFormat:@"%d + %d",lhs,rhs];
+        _question = [NSString stringWithFormat:@"%d + %d = ?",lhs,rhs];
         _answer = lhs + rhs;
     }
     return self;

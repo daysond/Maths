@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "AdditionQuestion.h"
+#import "InputHandler.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -17,17 +18,12 @@ int main(int argc, const char * argv[]) {
 //        int score = newgame.score;
         while (YES) {
             AdditionQuestion* question = [[AdditionQuestion alloc] init];
-            char userAnswer[255];
-            
             NSLog(@"%@",question.question);
+            NSString* answer = [InputHandler stringOutput];
             
-            fgets(userAnswer, 255, stdin);
-            NSString* userAnswerInString = [[NSString stringWithUTF8String:userAnswer] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-            
-            if (question.answer == [userAnswerInString intValue]) {
-                
+            if (question.answer == [answer intValue]) {
                 NSLog(@"Right! Your score is");
-            } else if ([userAnswerInString isEqualTo:@"quit"]) {
+            } else if ([answer isEqualTo:@"quit"]) {
                 break;
             } else {
                 NSLog(@"Wrong!");
