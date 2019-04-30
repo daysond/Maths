@@ -22,10 +22,11 @@ int main(int argc, const char * argv[]) {
             char userAnswer[255];
             NSLog(@"%@", [newgame newQuestionWithLHS:lhs andRHS:rhs]);
             fgets(userAnswer, 255, stdin);
-            if (answer == [[NSString stringWithUTF8String:userAnswer] intValue]) {
+            NSString* userAnswerInString = [[NSString stringWithUTF8String:userAnswer] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+            if (answer == [userAnswerInString intValue]) {
                 score += 10;
                 NSLog(@"Right! Your score is %d",score);
-            } else if ([[NSString stringWithUTF8String:userAnswer] isEqualTo:@"quit\n"]) {
+            } else if ([userAnswerInString isEqualTo:@"quit"]) {
                 break;
             } else {
                 NSLog(@"Wrong!");
