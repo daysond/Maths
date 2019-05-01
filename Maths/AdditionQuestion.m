@@ -15,13 +15,24 @@
 {
     self = [super init];
     if (self) {
-        _score = 0;
-        int lhs = arc4random_uniform(10);
-        int rhs = arc4random_uniform(10);
+        int lhs = arc4random_uniform(90)+10;
+        int rhs = arc4random_uniform(90)+10;
         _question = [NSString stringWithFormat:@"%d + %d = ?",lhs,rhs];
+        _startTime = [NSDate date];
         _answer = lhs + rhs;
     }
     return self;
+}
+
+-(NSInteger)answer {
+    _endTime = [NSDate date];
+    return _answer;
+}
+
+-(NSTimeInterval)answerTime {
+    
+    NSTimeInterval answerTime = [_endTime timeIntervalSinceDate:_startTime];
+    return answerTime;
 }
 
 @end

@@ -1,5 +1,5 @@
 //
-//  ScoreKeeper.h
+//  QuestionManager.h
 //  Maths
 //
 //  Created by Dayson Dong on 2019-04-30.
@@ -10,10 +10,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ScoreKeeper : NSObject
-@property int right;
-@property int wrong;
--(NSString*) calculateScore;
+@interface QuestionManager : NSObject
+
+@property NSMutableArray* questions;
+
+-(NSString*)timeOutput;
 @end
 
 NS_ASSUME_NONNULL_END

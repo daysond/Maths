@@ -10,4 +10,11 @@
 
 @implementation ScoreKeeper
 
+-(NSString *)calculateScore {
+    
+    float total = (float) (_right + _wrong);
+    int percentage = (int) (((float) _right / total) * 100);
+
+    return [NSString stringWithFormat:@"Right: %d, Wrong: %d --- %d%%",self.right,self.wrong,percentage];
+}
 @end
