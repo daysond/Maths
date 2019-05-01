@@ -7,18 +7,20 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "AdditionQuestion.h"
+#import "Question.h"
 #import "InputHandler.h"
 #import "ScoreKeeper.h"
 #import "QuestionManager.h"
+#import "QuestionFactory.h"
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
         NSLog(@"Answer the questions or type \"quit\" to quit.");
         ScoreKeeper* score = [[ScoreKeeper alloc] init];
         QuestionManager* questionManager = [[QuestionManager alloc]init];
+        QuestionFactory* questionFactory = [[QuestionFactory alloc] init];
         while (YES) {
-            AdditionQuestion* question = [[AdditionQuestion alloc] init];
+            Question* question = [[NSClassFromString([questionFactory generateRadomQuestion]) alloc] init];
             [questionManager.questions addObject:question];
             NSLog(@"%@",question.question);
             NSString* answer = [InputHandler stringOutput];

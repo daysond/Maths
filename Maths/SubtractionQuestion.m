@@ -1,14 +1,14 @@
 //
-//  AdditionQuestion.m
+//  SubtractionQuestion.m
 //  Maths
 //
 //  Created by Dayson Dong on 2019-04-30.
 //  Copyright © 2019 Dayson Dong. All rights reserved.
 //
 
-#import "AdditionQuestion.h"
+#import "SubtractionQuestion.h"
 
-@implementation AdditionQuestion
+@implementation SubtractionQuestion
 
 - (instancetype)init
 {
@@ -21,9 +21,8 @@
 }
 
 -(void)generateQuestion {
-    [super setQuestion:[NSString stringWithFormat:@"%ld + %ld = ?",(long)[super leftValue], (long)[super rightValue]]];
-    [super setAnswer:[super rightValue] + [super leftValue]];
+    [super setQuestion:[NSString stringWithFormat:@"%ld - %ld = ?",(long)[super leftValue], (long)[super rightValue]]];
+    [super setAnswer:[super leftValue] - [super rightValue]];
 }
 
 @end
-
